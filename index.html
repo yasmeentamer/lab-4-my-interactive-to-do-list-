@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro To-Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1> MY Pro To-Do List</h1>
+
+    </header>
+
+    <div class="input-row">
+      <input type="text" id="task-input" placeholder="Add a new task…" autocomplete="off"/>
+      <button class="btn-add" id="add-btn">+ Add</button>
+    </div>
+
+    <div class="controls">
+      <span class="filter-label">Filter:</span>
+      <div class="filter-group">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="incomplete">Incomplete</button>
+        <button class="chip" data-filter="completed">Completed</button>
+      </div>
+      <div class="divider"></div>
+      <span class="sort-label">Sort:</span>
+      <div class="sort-group">
+        <button class="chip active" data-sort="time">By Time</button>
+        <button class="chip" data-sort="alpha">A → Z</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">Total: <span id="stat-total">0</span></div>
+      <div class="stat">Done: <span id="stat-done">0</span></div>
+      <div class="stat">Pending: <span id="stat-pending">0</span></div>
+    </div>
+
+    <div id="task-list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
